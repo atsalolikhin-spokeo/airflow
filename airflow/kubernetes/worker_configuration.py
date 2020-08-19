@@ -441,6 +441,7 @@ class WorkerConfiguration(LoggingMixin):
             image_pull_secrets=self.kube_config.image_pull_secrets,
             volumes=self._get_volumes(),
             volume_mounts=self._get_volume_mounts(),
+            labels=self.kube_config.kube_labels,
             init_containers=self._get_init_containers(),
             annotations=self.kube_config.kube_annotations,
             affinity=self.kube_config.kube_affinity,
